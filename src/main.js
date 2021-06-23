@@ -3,6 +3,7 @@
 // game parameters
 var margin = {x:200, y:100};
 var game = new Game();
+var interface;
 var stepInterval; /* interval callback */
 var stepTimeInterval = 1000;
 
@@ -20,7 +21,7 @@ function setup (){
 
     // parameters
     var grid = game.getGrid();
-    var grid_size = grid.getGridSize();
+    var grid_size = grid.getSize();
     var cell_size = {x:32, y:32};
 
     // get canvas dimensions
@@ -29,6 +30,9 @@ function setup (){
 
     // create p5 canvas
     createCanvas(canvas_size_x, canvas_size_y);
+
+    // create interface
+    interface = new BasicInterface(game, cell_size);
 
     // set game step interval.
     stepInterval = setInterval(step, stepTimeInterval);
@@ -47,6 +51,9 @@ function draw () {
 
     // reset background.
 	background(30, 30, 45);
+
+    // draw game interface
+    interface.draw({x:width/2, y:height/2});
 
     // draw steps counter
     push();

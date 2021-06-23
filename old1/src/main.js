@@ -82,7 +82,6 @@ class Grid {
     draw (centre_pos) {
         
         push();
-
         stroke(255*0.15);
         fill(35);
         strokeWeight(1);

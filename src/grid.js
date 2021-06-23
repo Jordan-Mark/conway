@@ -46,7 +46,7 @@ class Grid {
         return abs(position1.x-position2.x) + abs(position1.y-position2.y);
     }
 
-    getGridSize (){
+    getSize (){
         return this.grid_size;
     }
     

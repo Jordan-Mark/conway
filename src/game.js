@@ -9,7 +9,6 @@ class Game {
         this.steps += 1;
     }
 
-
     getGrid(){
         return this.grid;
     }
