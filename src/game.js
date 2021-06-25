@@ -1,7 +1,7 @@
 class Game {
 
     constructor () {
-        this.grid = new Grid ({x:25, y:15});
+        this.grid = new Grid ({x:25*2, y:15*2});
         this.steps = 0;
     }
 
@@ -15,5 +15,17 @@ class Game {
 
     getSteps(){
         return this.steps;
+    }
+}
+
+class BasicGame extends Game {
+
+    constructor () {
+        super();
+        this.tilemap = new TileMap(this.grid);
+    }
+
+    createMap () {
+        
     }
 }

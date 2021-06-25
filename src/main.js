@@ -22,7 +22,7 @@ function setup (){
     // parameters
     var grid = game.getGrid();
     var grid_size = grid.getSize();
-    var cell_size = {x:32, y:32};
+    var cell_size = {x:16, y:16};
 
     // get canvas dimensions
     var canvas_size_x = grid_size.x * cell_size.x + margin.x;
@@ -53,7 +53,7 @@ function draw () {
 	background(30, 30, 45);
 
     // draw game interface
-    interface.draw({x:width/2, y:height/2});
+    interface.draw();
 
     // draw steps counter
     push();

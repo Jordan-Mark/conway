@@ -20,13 +20,14 @@ class BasicInterface extends Interface {
         this.cell_size = cell_size;
     }
 
-    draw (centre) {
+    draw () {
         
         push();
         stroke(255*0.20);
         fill(35);
         strokeWeight(1);
-
+        
+        var centre = {x:width/2, y:height/2};
         var grid_size = this.game.getGrid().getSize();
         var cell_size = this.cell_size
 
