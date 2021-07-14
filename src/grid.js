@@ -76,7 +76,7 @@ class TileMap {
 
     /* set tile at given position */
     setTile(position, tile){
-        this.tiles[this.hash(position)] = tile;
+        this.tiles[this.grid.hash(position)] = tile;
         if (tile == null){
             delete this.tiles[this.grid.hash(position)];
         }
@@ -111,6 +111,7 @@ Allows multiple entities to be present per grid cell
 class EntityMap {
 
     constructor(grid){
+        
         this.grid = grid;
 
         // thanks to the ambiguity of javascript, this could be EntityID's, or Entities!

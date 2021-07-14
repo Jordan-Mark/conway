@@ -9,7 +9,6 @@ class Interface {
     draw () {
 
     }
-
 }
 
 
@@ -40,12 +39,15 @@ class BasicInterface extends Interface {
                 const y = centre.y + (j-grid_size.y/2)*cell_size.y;
                 rect(x, y, cell_size.x, cell_size.y);
 
-                /*
-                var tile =  this.getTile({x:i, y:j});
+                // get grid tile and draw
+                var tile = this.game.getTileMap().getTile({x:i, y:j});
+
                 if (tile != null){
-                    tile.draw({x:x, y:y});
+                    if (tile.image != null){
+                        tile.draw({x:x, y:y});
+                    }
                 }
-                */
+
             }
         }
         pop();

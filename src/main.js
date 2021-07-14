@@ -2,22 +2,32 @@
 
 // game parameters
 var margin = {x:200, y:100};
-var game = new Game();
+var game = new BasicGame();
 var interface;
 var stepInterval; /* interval callback */
-var stepTimeInterval = 1000;
+var stepTimeInterval = 100;
 
 function preload (){
+
+    stonewall_img= loadImage('tiles/16x/wall.png');
+    hamlet_img = loadImage('tiles/hamlet.png');
+    farm_img = loadImage('tiles/farm.png');
+
     /*
     house_img = loadImage('tiles/house.png');
     hamlet_img = loadImage('tiles/hamlet.png');
-    farm_img = loadImage('tiles/farm.png');
+    
     player_img = loadImage('tiles/player.png');
     windmill_img = loadImage('tiles/windmill.png');
     */
+
 }
 
 function setup (){
+
+
+    // create game map
+    this.game.createMap();
 
     // parameters
     var grid = game.getGrid();
@@ -36,6 +46,7 @@ function setup (){
 
     // set game step interval.
     stepInterval = setInterval(step, stepTimeInterval);
+
     
 }
 
