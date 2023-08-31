@@ -1,4 +1,3 @@
-# grid_project
 JS classes for grids, tilemaps.
 
 Conway's game of life is implemented by default.
