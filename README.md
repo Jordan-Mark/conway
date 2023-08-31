@@ -1,5 +1,5 @@
 # grid_project
-Simple js code that helps make grid based games and simulations!
+JS classes for grids, tilemaps.
 
 Conway's game of life is implemented by default.
 
